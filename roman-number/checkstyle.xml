@@ -15,6 +15,10 @@
         <module name = "IllegalImport"/>
         <module name = "NeedBraces"/>
         <module name="Header">
-            <property name="headerFile" value="config/java.header"/>
-    </module>
-</module>
+            <property name = "header" value = "////////////////////////////////////////////////////////////////////\n
+            // [DAVIDE] [MARTINELLI] [2077679]\n
+            // [MARCO] [COLA] [2079237]\n
+            ////////////////////////////////////////////////////////////////////"/>
+        <module/>
+    <module/>
+<module/>
