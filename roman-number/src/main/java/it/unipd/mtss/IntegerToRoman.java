@@ -8,12 +8,13 @@ package it.unipd.mtss;
 public class IntegerToRoman {
     public static String convert(int number){
         String res = "";
-        if(number < 3 & number > 0){
+        if(number <= 3 && number > 0){
             for(int i = 0; i < number; i++){
-                res = res + "I";
+                res = res.concat("I");
             }
         }
-        return null;
+
+        return res;
     }
 }
 

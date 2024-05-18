@@ -8,17 +8,21 @@
         <module name = "BooleanExpressionComplexity"/>
         <module name = "CyclomaticComplexity"/>
         <module name = "FileLenght"/>
-        <module name = "MethodLength"/>
+        <module name = "MethodLength">
+            <property name="max" value="20"/>
+        </module>
         <module name = "EmptyCatchBlock"/>
         <module name = "FileTabCharacter"/>
         <module name = "AvoidStarImport"/>
         <module name = "IllegalImport"/>
         <module name = "NeedBraces"/>
         <module name="Header">
-            <property name = "header" value = "////////////////////////////////////////////////////////////////////\n
+            <property name="headerFile" value = "////////////////////////////////////////////////////////////////////\n
             // [DAVIDE] [MARTINELLI] [2077679]\n
             // [MARCO] [COLA] [2079237]\n
             ////////////////////////////////////////////////////////////////////"/>
+            <property name="ignoreLines" value="2, 3, 4"/>
+            <property name="fileExtensions" value="java"/>
         <module/>
     <module/>
 <module/>
