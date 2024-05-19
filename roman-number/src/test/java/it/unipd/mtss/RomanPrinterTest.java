@@ -1,93 +1,52 @@
 package it.unipd.mtss;
 
 import org.junit.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 public class RomanPrinterTest {
 
+    //test ASCII I
     @Test
-    public void shouldPrintI() {
-        RomanPrinter printer = new RomanPrinter();
-        String expect =
-                "  _____  \n" +
-                " |_   _| \n" +
-                "   | |   \n" +
-                "   | |   \n" +
-                "  _| |_  \n" +
-                " |_____| \n" +
-                "         \n";
-        assertEquals(expect.trim(), printer.print(1).trim());
+    public void TestI() {
+        StringBuilder result = new StringBuilder();
+        result.append(" |_   _|\n");
+        result.append("   | |  \n");
+        result.append("   | |  \n");
+        result.append("  _| |_ \n");
+        result.append(" |_____|\n");
+        result.append("\n");
+        String stringa= result.toString();
+        assertEquals(RomanPrinter.printAsciiArt("I"), stringa);
+        RomanPrinter.printToConsole(1);
     }
 
+    //test ASCII V
     @Test
-    public void shouldPrintII() {
-        RomanPrinter printer = new RomanPrinter();
-        String expect =
-                "  _____    _____  \n" +
-                " |_   _|  |_   _| \n" +
-                "   | |      | |   \n" +
-                "   | |      | |   \n" +
-                "  _| |_    _| |_  \n" +
-                " |_____|  |_____| \n" +
-                "                 \n";
-        assertEquals(expect.trim(), printer.print(2).trim());
+    public void TestV() {
+        StringBuilder result = new StringBuilder();
+        result.append(" \\ \\    / /\n");
+        result.append("  \\ \\  / / \n");
+        result.append("   \\ \\/ /  \n");
+        result.append("    \\  /   \n");
+        result.append("     \\/    \n");
+        result.append(" \n");
+        String stringa= result.toString();
+        assertEquals(RomanPrinter.printAsciiArt("V"), stringa);
+        RomanPrinter.printToConsole(5);
     }
 
+    //test ASCII X
     @Test
-    public void shouldPrintIII() {
-        RomanPrinter printer = new RomanPrinter();
-        String expect =
-                "  _____    _____    _____  \n" +
-                " |_   _|  |_   _|  |_   _| \n" +
-                "   | |      | |      | |   \n" +
-                "   | |      | |      | |   \n" +
-                "  _| |_    _| |_    _| |_  \n" +
-                " |_____|  |_____|  |_____| \n" +
-                "                         \n";
-        assertEquals(expect.trim(), printer.print(3).trim());
-    }
-
-    @Test
-    public void shouldPrintIV() {
-        RomanPrinter printer = new RomanPrinter();
-        String expect =
-                " _____  __      __ \n" +
-                "|_   _| \\ \\    / / \n" +
-                "  | |    \\ \\  / /  \n" +
-                "  | |     \\ \\/ /   \n" +
-                " _| |_     \\  /    \n" +
-                "|_____|     \\/     \n" +
-                "               \n";
-        assertEquals(expect.trim(), printer.print(4).trim());
-    }
-
-    @Test
-    public void shouldPrintV() {
-        RomanPrinter printer = new RomanPrinter();
-        String expect =
-                " __      __ \n" +
-                " \\ \\    / / \n" +
-                "  \\ \\  / /  \n" +
-                "   \\ \\/ /   \n" +
-                "    \\  /    \n" +
-                "     \\/     \n" +
-                "            \n";
-        assertEquals(expect.trim(), printer.print(5).trim());
-    }
-
-    @Test
-    public void shouldPrintVI() {
-        RomanPrinter printer = new RomanPrinter();
-        String expect =
-                " __      __   _____  \n" +
-                " \\ \\    / /  |_   _| \n" +
-                "  \\ \\  / /     | |   \n" +
-                "   \\ \\/ /      | |   \n" +
-                "    \\  /      _| |_  \n" +
-                "     \\/      |_____| \n" +
-                "                    \n";
-        assertEquals(expect.trim(), printer.print(6).trim());
+    public void TestX() {
+        StringBuilder result = new StringBuilder();
+        result.append(" \\ \\ / /\n");
+        result.append("  \\ V / \n");
+        result.append("   > <  \n");
+        result.append("  / . \\ \n");
+        result.append(" /_/ \\_\\\n");
+        result.append(" \n");
+        String stringa= result.toString();
+        assertEquals(RomanPrinter.printAsciiArt("X"), stringa);
+        RomanPrinter.printToConsole(10);
     }
 }
-

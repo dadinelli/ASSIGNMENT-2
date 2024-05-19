@@ -1,44 +1,46 @@
 package it.unipd.mtss;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class IntegerToRomanTest {
-
-    @Test
-    public void shouldConvert1() {
-        assertEquals("I", IntegerToRoman.convert(1));
-        System.out.println("shouldConvert1()");
+    //test dei numeri fuori dal range, zero, sotto 1 oppure oltre 10
+    @Test(expected = IllegalArgumentException.class)
+    public void overRangeThrowsIllegalArgumentException() {
+        IntegerToRoman.convert(11);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void underRangeThrowsIllegalArgumentException() {
+        IntegerToRoman.convert(0);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void underZeroThrowsIllegalArgumentException() {
+        IntegerToRoman.convert(-1);
     }
 
+    //primi 3 numeri
     @Test
-    public void shouldConvert2() {
-        assertEquals("II", IntegerToRoman.convert(2));
-        System.out.println("shouldConvert2()");
+    public void First3NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(1), "I");
+        assertEquals(IntegerToRoman.convert(2), "II");
+        assertEquals(IntegerToRoman.convert(3), "III");
     }
 
+    //primi 6 numeri
     @Test
-    public void shouldConvert3(){
-        assertEquals("III", IntegerToRoman.convert(3));
-        System.out.println("shouldConvert3()");
+    public void First6NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(4), "IV");
+        assertEquals(IntegerToRoman.convert(5), "V");
+        assertEquals(IntegerToRoman.convert(6), "VI");
     }
 
+    //primi 10 numeri
     @Test
-    public void shouldConvert4() {
-        assertEquals("IV", IntegerToRoman.convert(4));
-        System.out.println("shouldConvert4()");
+    public void First10NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(7), "VII");
+        assertEquals(IntegerToRoman.convert(8), "VIII");
+        assertEquals(IntegerToRoman.convert(9), "IX");
+        assertEquals(IntegerToRoman.convert(10), "X");
     }
 
-    @Test
-    public void shouldConvert5() {
-        assertEquals("V", IntegerToRoman.convert(5));
-        System.out.println("shouldConvert5()");
-    }
-
-    @Test
-    public void shouldConvert6() {
-        assertEquals("VI", IntegerToRoman.convert(6));
-        System.out.println("shouldConvert6()");
-    }
 }
