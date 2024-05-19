@@ -5,10 +5,10 @@ import org.junit.Test;
 
 public class IntegerToRomanTest {
 
-    //test dei numeri fuori dal range, zero, sotto 1 oppure oltre 100
+    //test dei numeri fuori dal range, zero, sotto 1 oppure oltre 500
     @Test(expected = IllegalArgumentException.class)
     public void overRangeThrowsIllegalArgumentException() {
-        IntegerToRoman.convert(102);
+        IntegerToRoman.convert(501);
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -65,4 +65,11 @@ public class IntegerToRomanTest {
     public void First100NumbersConversion(){
         assertEquals(IntegerToRoman.convert(100), "C");
     }
+
+    //primi 500 numeri
+    @Test
+    public void First500NumbersConversion(){
+        assertEquals(IntegerToRoman.convert(500), "D");
+    }
+
 }

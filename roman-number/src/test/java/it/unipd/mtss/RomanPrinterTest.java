@@ -74,4 +74,15 @@ public class RomanPrinterTest {
                 " \\_____| \n", hundred);
     }
 
+    @Test
+    public void TestD(){
+        String fiveHundreds = RomanPrinter.print(500);
+        assertEquals(" _____   \n"+
+                "|  __ \\  \n"+
+                "| |  | | \n"+
+                "| |  | | \n"+
+                "| |__| | \n"+
+                "|_____/  \n", fiveHundreds);
+    }
+
 }
