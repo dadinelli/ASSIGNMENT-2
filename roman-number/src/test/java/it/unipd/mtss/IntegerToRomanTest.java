@@ -1,44 +1,73 @@
 package it.unipd.mtss;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class IntegerToRomanTest {
 
-    @Test
-    public void shouldConvert1() {
-        assertEquals("I", IntegerToRoman.convert(1));
-        System.out.println("shouldConvert1()");
+    //test dei numeri fuori dal range, zero, sotto 1 oppure oltre 1000
+    @Test(expected = IllegalArgumentException.class)
+    public void overRangeThrowsIllegalArgumentException() {
+        IntegerToRoman.convert(1001);
     }
 
-    @Test
-    public void shouldConvert2() {
-        assertEquals("II", IntegerToRoman.convert(2));
-        System.out.println("shouldConvert2()");
+    @Test(expected = IllegalArgumentException.class)
+    public void convert_0_IllegalArgumentException() {
+        IntegerToRoman.convert(0);
     }
 
-    @Test
-    public void shouldConvert3(){
-        assertEquals("III", IntegerToRoman.convert(3));
-        System.out.println("shouldConvert3()");
+    @Test(expected = IllegalArgumentException.class)
+    public void under_0_ThrowsIllegalArgumentException() {
+        IntegerToRoman.convert(-1);
     }
 
+    //primi 3 numeri
     @Test
-    public void shouldConvert4() {
-        assertEquals("IV", IntegerToRoman.convert(4));
-        System.out.println("shouldConvert4()");
+    public void First3NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(1), "I");
+        assertEquals(IntegerToRoman.convert(2), "II");
+        assertEquals(IntegerToRoman.convert(3), "III");
     }
 
+    //primi 6 numeri
     @Test
-    public void shouldConvert5() {
-        assertEquals("V", IntegerToRoman.convert(5));
-        System.out.println("shouldConvert5()");
+    public void First6NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(6), "VI");
     }
 
+    //primi 10 numeri
     @Test
-    public void shouldConvert6() {
-        assertEquals("VI", IntegerToRoman.convert(6));
-        System.out.println("shouldConvert6()");
+    public void First10NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(10), "X");
+    }
+
+    //primi 20 numeri
+    @Test
+    public void First20NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(20), "XX");
+    }
+
+    //primi 50 numeri
+    @Test
+    public void First50NumbersConversion(){
+        assertEquals(IntegerToRoman.convert(50), "L");
+    }
+
+    //primi 100 numeri
+    @Test
+    public void First100NumbersConversion(){
+        assertEquals(IntegerToRoman.convert(100), "C");
+    }
+
+    //primi 500 numeri
+    @Test
+    public void First500NumbersConversion(){
+        assertEquals(IntegerToRoman.convert(500), "D");
+    }
+
+    //primi 1000 numeri
+    @Test
+    public void First1000NumbersConversion(){
+        assertEquals(IntegerToRoman.convert(1000), "M");
     }
 }

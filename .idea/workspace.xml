@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93f8165b-5235-4980-a0f0-62dbb11a9dbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ASSIGNMENT-2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roman-number/target/classes/it/unipd/mtss/IntegerToRoman.class" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/classes/it/unipd/mtss/IntegerToRoman.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roman-number/target/classes/it/unipd/mtss/RomanPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/classes/it/unipd/mtss/RomanPrinter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roman-number/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roman-number/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roman-number/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roman-number/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roman-number/target/roman-number-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/roman-number-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roman-number/target/surefire-reports/TEST-it.unipd.mtss.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/surefire-reports/TEST-it.unipd.mtss.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roman-number/target/surefire-reports/it.unipd.mtss.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/surefire-reports/it.unipd.mtss.AppTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roman-number/target/test-classes/it/unipd/mtss/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/test-classes/it/unipd/mtss/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roman-number/target/test-classes/it/unipd/mtss/IntegerToRomanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/test-classes/it/unipd/mtss/IntegerToRomanTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roman-number/target/test-classes/it/unipd/mtss/RomanPrinterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/roman-number/target/test-classes/it/unipd/mtss/RomanPrinterTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cola-marco&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dadinelli/ASSIGNMENT-2.git&quot;,
+    &quot;accountId&quot;: &quot;2691b191-1326-4050-8f33-21c86c1d0c6a&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -35,19 +45,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mcola/Documents/MTSS/ASSIGNMENT-2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/mcola/Documents/MTSS/ASSIGNMENT-2/roman-number",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ASSIGNMENT-2" />
@@ -80,10 +99,34 @@
       <option name="presentableId" value="Default" />
       <updated>1716019437761</updated>
       <workItem from="1716019438891" duration="872000" />
+      <workItem from="1716042928528" duration="1155000" />
+      <workItem from="1716044097305" duration="275000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/roman-number/src/main/java/it/unipd/mtss/RomanPrinter.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
