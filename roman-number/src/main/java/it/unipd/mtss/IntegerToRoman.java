@@ -8,31 +8,25 @@ import java.util.TreeMap;
 //Conversione numeri interi in numeri romani
 public class IntegerToRoman {
 
-    //Map che assoccia numeri arabi a numeri romani
-    private static final TreeMap<Integer, String> ROMAN_NUMERALS_MAP = new TreeMap<>();
-    static {
-        ROMAN_NUMERALS_MAP.put(10, "X");
-        ROMAN_NUMERALS_MAP.put(9, "IX");
-        ROMAN_NUMERALS_MAP.put(5, "V");
-        ROMAN_NUMERALS_MAP.put(4, "IV");
-        ROMAN_NUMERALS_MAP.put(1, "I");
-    }
+    private static String[] ones = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+    private static String[] tens = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+    private static String[] hundreds = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+    private static String[] thousands = {"", "M"};
 
     public static String convert(int number){
 
-        if (number < 1 || number > 10) {
-            throw new IllegalArgumentException("Il numero deve essere compreso tra 1 e 10.");
+        if (number < 1 || number > 20) {
+            throw new IllegalArgumentException(
+                    "Il numero deve essere compreso tra 1 e 20."
+            );
         }
 
-        StringBuilder romanNumber = new StringBuilder();
-        int floorEntry;
-        while (number > 0) {
-            floorEntry = ROMAN_NUMERALS_MAP.floorKey(number);
-            romanNumber.append(ROMAN_NUMERALS_MAP.get(floorEntry));
-            number -= floorEntry;
-        }
+        String thousandsDigits = thousands[number / 1000];
+        String hundredsDigits = hundreds[(number % 1000) /100];
+        String tensDigits = tens[(number % 100)/ 10];
+        String onesDigits = ones[number % 10];
 
-        return romanNumber.toString();
+        return thousandsDigits+hundredsDigits+tensDigits+onesDigits;
     }
 }
 

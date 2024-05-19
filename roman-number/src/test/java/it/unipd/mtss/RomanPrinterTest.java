@@ -8,45 +8,47 @@ public class RomanPrinterTest {
     //test ASCII I
     @Test
     public void TestI() {
-        StringBuilder result = new StringBuilder();
-        result.append(" |_   _|\n");
-        result.append("   | |  \n");
-        result.append("   | |  \n");
-        result.append("  _| |_ \n");
-        result.append(" |_____|\n");
-        result.append("\n");
-        String stringa= result.toString();
-        assertEquals(RomanPrinter.printAsciiArt("I"), stringa);
-        RomanPrinter.printToConsole(1);
+        String one = RomanPrinter.print(1);
+        assertEquals(" _____ \n"+
+                "|_   _|\n"+
+                "  | |  \n"+
+                "  | |  \n"+
+                " _| |_ \n"+
+                "|_____|\n" , one);
     }
 
     //test ASCII V
     @Test
-    public void TestV() {
-        StringBuilder result = new StringBuilder();
-        result.append(" \\ \\    / /\n");
-        result.append("  \\ \\  / / \n");
-        result.append("   \\ \\/ /  \n");
-        result.append("    \\  /   \n");
-        result.append("     \\/    \n");
-        result.append(" \n");
-        String stringa= result.toString();
-        assertEquals(RomanPrinter.printAsciiArt("V"), stringa);
-        RomanPrinter.printToConsole(5);
+    public void TestV(){
+        String five = RomanPrinter.print(5);
+        assertEquals("__      __\n"+
+                "\\ \\    / /\n"+
+                " \\ \\  / / \n"+
+                "  \\ \\/ /  \n"+
+                "   \\  /   \n"+
+                "    \\/    \n", five);
+
     }
 
-    //test ASCII X
     @Test
-    public void TestX() {
-        StringBuilder result = new StringBuilder();
-        result.append(" \\ \\ / /\n");
-        result.append("  \\ V / \n");
-        result.append("   > <  \n");
-        result.append("  / . \\ \n");
-        result.append(" /_/ \\_\\\n");
-        result.append(" \n");
-        String stringa= result.toString();
-        assertEquals(RomanPrinter.printAsciiArt("X"), stringa);
-        RomanPrinter.printToConsole(10);
+    public void TestX(){
+        String ten = RomanPrinter.print(10);
+        assertEquals("__   __ \n"+
+                "\\ \\ / / \n"+
+                " \\ V /  \n"+
+                "  > <   \n"+
+                " / . \\  \n"+
+                "/_/ \\_\\ \n", ten);
+    }
+
+    @Test
+    public void TestXX(){
+        String twenty = RomanPrinter.print(20);
+        assertEquals("__   __ __   __ \n"+
+                "\\ \\ / / \\ \\ / / \n"+
+                " \\ V /   \\ V /  \n"+
+                "  > <     > <   \n"+
+                " / . \\   / . \\  \n"+
+                "/_/ \\_\\ /_/ \\_\\ \n", twenty);
     }
 }

@@ -4,17 +4,20 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class IntegerToRomanTest {
-    //test dei numeri fuori dal range, zero, sotto 1 oppure oltre 10
+
+    //test dei numeri fuori dal range, zero, sotto 1 oppure oltre 20
     @Test(expected = IllegalArgumentException.class)
     public void overRangeThrowsIllegalArgumentException() {
-        IntegerToRoman.convert(11);
+        IntegerToRoman.convert(21);
     }
+
     @Test(expected = IllegalArgumentException.class)
-    public void underRangeThrowsIllegalArgumentException() {
+    public void convert_0_IllegalArgumentException() {
         IntegerToRoman.convert(0);
     }
+
     @Test(expected = IllegalArgumentException.class)
-    public void underZeroThrowsIllegalArgumentException() {
+    public void under_0_ThrowsIllegalArgumentException() {
         IntegerToRoman.convert(-1);
     }
 
@@ -41,6 +44,14 @@ public class IntegerToRomanTest {
         assertEquals(IntegerToRoman.convert(8), "VIII");
         assertEquals(IntegerToRoman.convert(9), "IX");
         assertEquals(IntegerToRoman.convert(10), "X");
+    }
+
+    //primi 20 numeri
+    @Test
+    public void First20NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(12), "XII");
+        assertEquals(IntegerToRoman.convert(17), "XVII");
+        assertEquals(IntegerToRoman.convert(20), "XX");
     }
 
 }
