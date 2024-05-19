@@ -4,85 +4,56 @@
 ////////////////////////////////////////////////////////////////////
 
 package it.unipd.mtss;
-
+//stampa i numeri romani convertiti da IntegerToRoman in ASCII art
 public class RomanPrinter {
     public static String print(int num){
         return printAsciiArt(IntegerToRoman.convert(num));
     }
 
-    private static String printAsciiArt(String res){
-        String I =
-                "  _____  \n" +
-                " |_   _| \n" +
-                "   | |   \n" +
-                "   | |   \n" +
-                "  _| |_  \n" +
-                " |_____| \n" +
-                "         \n";
+    public static String printAsciiArt(String romanNumber){
+        StringBuilder result = new StringBuilder();
+        int length = romanNumber.length();
+        for (int i = 0; i < length; i++) {
+            char c = romanNumber.charAt(i);
+            switch(c) {
+                case 'I':
 
-        String V =
-                " __      __ \n" +
-                " \\ \\    / / \n" +
-                "  \\ \\  / /  \n" +
-                "   \\ \\/ /   \n" +
-                "    \\  /    \n" +
-                "     \\/     \n" +
-                "            \n";
+                    result.append(" |_   _|\n");
+                    result.append("   | |  \n");
+                    result.append("   | |  \n");
+                    result.append("  _| |_ \n");
+                    result.append(" |_____|\n");
+                    result.append("\n");
+                    break;
 
-        String IV =
-                " _____  __      __ \n" +
-                "|_   _| \\ \\    / / \n" +
-                "  | |    \\ \\  / /  \n" +
-                "  | |     \\ \\/ /   \n" +
-                " _| |_     \\  /    \n" +
-                "|_____|     \\/     \n" +
-                "               \n";
+                case 'V':
+                    result.append(" \\ \\    / /\n");
+                    result.append("  \\ \\  / / \n");
+                    result.append("   \\ \\/ /  \n");
+                    result.append("    \\  /   \n");
+                    result.append("     \\/    \n");
+                    result.append(" \n");
+                    break;
 
-        String[] linesI = I.split("\n");
-        String[] linesV = V.split("\n");
-        String[] linesIV = IV.split("\n");
+                case 'X':
+                    result.append(" \\ \\ / /\n");
+                    result.append("  \\ V / \n");
+                    result.append("   > <  \n");
+                    result.append("  / . \\ \n");
+                    result.append(" /_/ \\_\\\n");
+                    result.append(" \n");
+                    break;
 
-        int numLines = linesI.length;
-
-        StringBuilder[] outputLines = new StringBuilder[numLines];
-        for (int i = 0; i < numLines; i++) {
-            outputLines[i] = new StringBuilder();
-        }
-
-        int i = 0;
-        while (i < res.length()) {
-            String[] currentLines;
-            if (i + 1 < res.length() && res.substring(i, i + 2).equals("IV")) {
-                currentLines = linesIV;
-                i += 2; // Skip next character
-            } else {
-                switch (res.charAt(i)) {
-                    case 'I':
-                        currentLines = linesI;
-                        break;
-                    case 'V':
-                        currentLines = linesV;
-                        break;
-                    default:
-                        throw new IllegalArgumentException("Numero Romano non supportato: " + res.charAt(i));
-                }
-                i++;
-            }
-            for (int j = 0; j < numLines; j++) {
-                outputLines[j].append(currentLines[j]);
+                default:
+                    throw new IllegalArgumentException("Invalid Roman numeral: " + c);
             }
         }
-
-
-        StringBuilder output = new StringBuilder();
-        for (StringBuilder line : outputLines) {
-            output.append(line).append("\n");
-        }
-
-        String result = output.toString();
-        System.out.println(result);
-        return result;
+        return result.toString();
+    }
+    public static void printToConsole(int num) {
+        String romanNumber = IntegerToRoman.convert(num);
+        String asciiArt = printAsciiArt(romanNumber);
+        System.out.println(asciiArt);
     }
 }
-
 
